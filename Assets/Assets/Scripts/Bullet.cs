@@ -9,8 +9,6 @@ public class Bullet : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed;
-    }
+    { rb = GetComponent<Rigidbody2D>();
+      rb.velocity = transform.right * speed; }
 }

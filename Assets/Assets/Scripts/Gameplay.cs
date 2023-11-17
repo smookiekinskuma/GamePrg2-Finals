@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class Gameplay : MonoBehaviour
 {
     public Player player;
+    public Cultist cultist;
     public Acts acts;
 
     //UI
@@ -17,17 +19,16 @@ public class Gameplay : MonoBehaviour
     public int TutorialNo;
     public GameObject Detection, tutorialText;
     public string LesThoughts_Update;
-    public float timer;
-    public Vector3 SlideUp, SlideDown;
 
-    //Cultists
-    public GameObject CBatch1, CBatch2, CBatch3, CBatch4, CBatch5, CBatch6, CBatch7,
-        CBatch8, CBatch9, CBatch10, CBatch11, CBatch12, CBatch13, CBatch14;
-
+    //Cult Events
+    public GameObject Batch_1, Batch_2, Batch_3, Batch_4, Batch_5, Batch_6, Batch_7, Batch_8, Batch_9, Batch_10, Batch_11, Batch_12, Batch_13, Batch_14;
+    public int Kill;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        Kill = 0;
         TutorialNo = 0;
     }
 
@@ -39,6 +40,7 @@ public class Gameplay : MonoBehaviour
         LesThoughts.text = LesThoughts_Update;
 
         Tutorial();
+        CultEvent();
     }
 
     void Tutorial()
@@ -47,7 +49,6 @@ public class Gameplay : MonoBehaviour
         switch (TutorialNo)
         {
             case 1:
-
                 LesThoughts_Update = "This hallway wasn't this long... (Hold shift to run)";
                 break;
             case 2:
@@ -58,18 +59,34 @@ public class Gameplay : MonoBehaviour
                 break;
             case 4:
                 LesThoughts_Update = "They're they are! ('K' to shoot the cultists)";
-                Detection.SetActive(false);
-                CBatch1.SetActive(true);
+                Batch_1.SetActive(true);
                 break;
             case 5:
                 LesThoughts_Update = "They all died simutaneously?! (They're all connected. Killing one will kill everyone in the room)";
                 break;
             case 6:
                 LesThoughts_Update = "Hell's about to begin... (One hit one heart down. You only have 10 hearts)";
+                player.Health = 10;
                 break;
             case 7:
-
+                LesThoughts_Update = "I hope we can all get out of here alive...";
                 break;
         }
+    }
+
+    public void CultEvent()
+    {
+        switch (Kill)
+        {
+            case 1:
+                if (TutorialNo == 4) { TutorialNo = 5; }
+                Batch_1.SetActive(false);
+                break;
+        }
+    }
+
+    public void SavePoints()
+    {
+
     }
 }
