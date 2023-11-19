@@ -14,6 +14,14 @@ TagManager:
   - OneLastTutorial
   - Cultist
   - TooLong
+  - BulletDrop
+  - CultistLibrary
+  - CultistClassroom
+  - CultistChapel
+  - TheEnd
+  - CultistBasement
+  - Basement
+  - BulletSpawn
   layers:
   - Default
   - TransparentFX
@@ -86,6 +94,9 @@ TagManager:
     locked: 0
   - name: Bookshelves
     uniqueID: 726849631
+    locked: 0
+  - name: Bullet
+    uniqueID: 765083955
     locked: 0
   - name: Cultist
     uniqueID: 4036056435

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1843998821407674373}
   m_Layer: 0
   m_Name: BulletDrop
-  m_TagString: Bullet
+  m_TagString: BulletDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537817671394433493}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.271614, y: -1.3878719, z: 0.025754107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 765083955
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 845450854, guid: 01df864346dc9474f8fbc101005b3667, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
