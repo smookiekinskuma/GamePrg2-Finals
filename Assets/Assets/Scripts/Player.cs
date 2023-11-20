@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
         Shooting(); // go bang bang bang
         Movement();
         HealthBar();
-        Cheats();
+        //Cheats(); //if you wanna cheat or sum
     }
 
     void FixedUpdate()
@@ -163,7 +163,7 @@ public class Player : MonoBehaviour
             if (gameplay.TutorialNo == 2) { gameplay.TutorialNo = 3; }
         }
         
-        //The Hallway
+        //The Hallway/Tutorials
         if (collision.CompareTag("TooLong"))
         { if (gameplay.TutorialNo == 0) { gameplay.TutorialNo = 1; } gameplay.TooLong.SetActive(false); }
 
@@ -192,7 +192,7 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Classroom"))
         {
             Health = 10;
-            acts.SceneProgression++;
+            acts.SceneProgression = 55;
             gameplay.ToClassroom.SetActive(false); 
         }
         //End of Library
@@ -222,7 +222,7 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Basement"))
         {
             Health = 10;
-            acts.SceneProgression++;
+            acts.SceneProgression = 68;
             gameplay.ToBasement.SetActive(false); 
         }
         //End of Chapel

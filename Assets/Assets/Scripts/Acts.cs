@@ -127,7 +127,7 @@ public class Acts : MonoBehaviour
                 character.transform.DOMove(SlideIn, Timer);
 
                 CharaName_Update = "Maria";
-                CharaChat_Update = "Allow Me...";
+                CharaChat_Update = "Allow me...";
                 break;
             case 3:
                 character.transform.DOMove(SlideOut, Timer);
@@ -566,11 +566,11 @@ public class Acts : MonoBehaviour
                 character.transform.DOMove(SlideOut, Timer);
 
                 CharaName_Update = "Dr. Lynn";
-                CharaChat_Update = "You're children are still alive. They got lazy into looking. Like what they did with the other children...";
+                CharaChat_Update = "Your children are still alive. They got lazy into looking. Like what they did with the other children...";
                 break;
             case 64: 
                 CharaName_Update = "Leo";
-                CharaChat_Update = "Not now, Lynn";
+                CharaChat_Update = "Not now, Lynn...";
                 break;
             case 65:
                 character.transform.DOMove(SlideIn, Timer);
@@ -602,7 +602,7 @@ public class Acts : MonoBehaviour
                 character.transform.DOMove(SlideIn, Timer);
                 Sequence Fade = DOTween.Sequence();
                 Fade.Append(black.DOFade(1f, Timer));
-                Fade.Append(gameplay.Les.transform.DOMove(new Vector2(-355.52f, -22.13f), 0f)).SetDelay(0.25f);
+                Fade.Append(gameplay.Les.transform.DOMove(new Vector2(-357.05f, -21.34f), 0f)).SetDelay(0.25f);
 
                 gameplay.gameplayFolder.SetActive(false);
                 YLes_Worry.SetActive(false);
